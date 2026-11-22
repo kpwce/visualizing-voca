@@ -12,13 +12,27 @@ The tags themselves consist of thousands of unique words and phrases which are a
 
 The data from institutional digital archives such as Voca may surprise users with its evidence of human creation. Despite a clean, alphabetized digital interface, the tags contain language that resists standardization and that reflects individual experiences with the recordings. For example, the tags ‘surreal’ and ‘surrealism’ both appear. (*maybe find different example*). An automated tagger would likely have collapsed these into one term. The existence of both shows the existence of the multiple taggers who made slightly different associations with similar content.
 
-This lack of standardization is an issue that is frequently present in digital collections and digital archives today (*citation?*). However, it is uncertain whether manual tagging practices like these will remain the norm or whether new tools such as LLMs will result in a more standardized digital landscape.
+This lack of standardization is an issue that is frequently present in digital collections and digital archives today (*citation?*). As early as 2009, Arlene G. Taylor and Daniel N. Joudrey were discussing in which digital environments it is most appropriate to use a controlled vocabulary, noting that "people do not think of the same terms to express the same aboutness concepts." (333) Taylor and Joudrey discuss the benefits and drawbacks of using controlled vocabularies compared to social tagging practices. A controlled vocabulary is more likely to result in a concise, manageable list of subject terms, while social tagging practices are more likely to capture nuances and inter-community understandings that controlled vocabularies might miss.
+
+Voca's archive, however, is an excellent example of a digital archive which has been processed and tagged by library staff members and still contains broad variation in tags. Both the variations of actual words used and the type of data that seems to have been prioritized in the tags varies between readings. The poetry center has been building Voca for x years; this sort of variation reflects the changes in staff, workflows, and understandings of digital data over time.
+
+As AI tools become more routinely used in library work, the question the future of digital tagging practices is even more uncertain. 
 
 Standardized digital tagging systems offer many benefits to digital archives. They create data that is more user-friendly, more search-engine friendly, and likely in smaller amounts. The purpose of this essay is not to argue for the creation and use of purposefully messy data. Instead, we are curious to discover the narratives contained in this kind of jointly created metadata.
 
-## Parts of Speech --> move to metapoetry
+## Sorting tags manually and automatically --> Parts of Speech --> move to metapoetry
 
-We used an automated process *(explain process)* to organize the tags by parts of speech. *Discuss which parts of speech were most prevalent, what is interesting about the results.*
+Our first engagement with the tags was an attempt to sort them into more manageable categories. This initial approach was a manual one; we came up with a list of ten semantic categories and attempted to align each tag with its category. This process quickly became almost impossible. *examples*.
+
+Next, we used several python scripts to organize the tags into categories. One script created 84 word clusters, another 48. Ultimately, we used the script-generated categories and manually merged them together and then sorted unassigned tags. The more we worked with the tags using this approach, the more the various tensions between human categorization, machine learning processes, messy data, the English language, etc....
+
+We also experimented with an automated process *(explain process)* that organized the tags by parts of speech. The automated tagger broke phrases into several words so that terms like "sixth grade" were tagged 'noun' *and* 'adjective.'
+
+Nouns are the most common part of speech in the dataset by far, with 2,405 words and phrases tagged. The automated tagger also looked for interjections, auxiliary verbs, adpositional phrases, determiners, subordinating conjunctions, coordinating conjunctions, X (voiceless velar fricative??), pronouns, and proper nouns. It was largely excellent at identifying nouns and proper nouns but struggled with adverbs and some of the less common parts of speech such as interjections. For example, the adverb list included very few actual adverbs and included things like 'woolly bear caterpillar,' 'lichen,' and 'cacti.'
+
+The automatically-created tags list was useful to help us understand the data, and was interesting to create poetry with. As we sorted the tags into semantic categories, it was frequently necessary to refer back to the poems the tags were associated with, to make sure we understood the meaning. For example, should 'eve' refer to time of day or the religious figure?
+
+*Discuss which parts of speech were most prevalent, what is interesting about the results.*
 
 - phrases are often tagged noun AND adj
     - e.g. 'ancient greece' 'sixth grade'
