@@ -25,6 +25,11 @@ const spec = {
   width: "container",
   height: 350,
   autosize: { type: "fit-x", contains: "padding" },
+  params: [{
+    name: "grid_zoom_pan",
+    select: { type: "interval", encodings: ["x"] },
+    bind: "scales"
+  }],
   transform: [
     { calculate: "datum.contains_uncollected_or_unpublished", as: "is_highlighted" },
     { window: [{ op: "count", as: "stack_index" }], groupby: ["parsed_date"], sort: [{ field: "reading_title" }] }
@@ -69,7 +74,7 @@ function showTracks(d) {
     const categories = Array.isArray(t.track_classification)
       ? t.track_classification.join(", ")
       : (t.track_classification || "");
-    
+
     const uncollectedStr = toBool(t.is_uncollected_or_unpublished) ? ' <span class="badge warn">Uncollected</span>' : "";
     const yearStr = t.citation_year ? ` (${t.citation_year})` : "";
     const citationHtml = t.citation ? `<div style="font-size:0.85rem; color:#666; margin-top:2px;">${t.citation}</div>` : "";
@@ -87,7 +92,7 @@ function showTracks(d) {
 
   dlgBody.innerHTML = `
     <p><strong>Date:</strong> ${d.reading_date} (${tracks.length} tracks)</p>
-    <h4 style="margin: 1rem 0 0.5rem 0;">Tracks Recorded:</h4>
+    <h5>Tracks Recorded:</h5>
     <div class="rd-table-container">
       <table class="rd-table">
         <thead>
@@ -114,7 +119,7 @@ function renderTable() {
 
     const titleCol = `
       <a href="${href(d.reading_link)}" target="_blank" rel="noopener" class="reading-title-link">${d.reading_title}</a>
-      ${d.contains_uncollected_or_unpublished ? `<span class="badge warn" style="margin-left:6px; font-size:0.75rem;">Uncollected</span>` : ""}`;
+      ${d.contains_uncollected_or_unpublished ? `<span class="badge warn" style="margin-left:5px; font-size:0.75rem;">Uncollected</span>` : ""}`;
 
     tr.innerHTML = `
       <td>${d.reading_date}</td>

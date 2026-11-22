@@ -23,7 +23,7 @@
     <!-- modal dialog UI -->
     <dialog id="track-dialog">
         <div class="dlg-header">
-            <h3 id="dlg-title"></h3>
+            <h4 id="dlg-title"></h4>
             <button class="dlg-close" type="button"> ✕ </button>
         </div>
         <div id="dlg-body" style="margin-top: 1rem;"></div>

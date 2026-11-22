@@ -55,3 +55,10 @@ const { title, description } = Astro.props;
 		<Footer />
 	</body>
 </html>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    const hash = link.getAttribute('href');
+    link.setAttribute('href', `${window.location.pathname}${hash}`);
+  });
+</script>
