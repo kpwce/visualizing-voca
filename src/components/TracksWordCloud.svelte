@@ -103,7 +103,7 @@
 				.start();
 		}
 
-		fetch("/wordcloud_data.json")
+		fetch("./visualizing-voca/wordcloud_data.json")
 			.then((response) => {
 				if (!response.ok) throw new Error("JSON file not loading!");
 				return response.json();

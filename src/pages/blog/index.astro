@@ -78,7 +78,7 @@ const posts = (await getCollection('blog'));
 				<ul>
 					{posts.map((post) => (
 						<li>
-							<a href={`/blog/${post.id}/`}>
+							<a href={`./visualizing-voca/blog/${post.id}/`}>
 								<h4 class="title">{post.data.title}</h4>
 							</a>
 						</li>

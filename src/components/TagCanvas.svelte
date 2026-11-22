@@ -19,7 +19,7 @@
 
     async function init() {
       try {
-        const response = await fetch('/visualization_data/reading_tag_counts.json');
+        const response = await fetch('./visualizing-voca/visualization_data/reading_tag_counts.json');
         const countsDict = await response.json();
 
         if (isDestroyed) return;

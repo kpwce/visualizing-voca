@@ -112,13 +112,13 @@ const cloud = cloudModule.default ?? cloudModule;
 			html: `But at the heart of the reading are the poems.`,
 		},
 		{
-			html: `Some were published long ago. Some were published recently. Some were unpublished at the time, or uncollected. To explore the uncollected, take a look at <a href="./understanding-the-uncollected" class="internal-link">Understanding the Uncollected</a>.`,
+			html: `Some were published long ago. Some were published recently. Some were unpublished at the time, or uncollected. To explore the uncollected, take a look at <a href="./visualizing-voca/understanding-the-uncollected" class="internal-link">Understanding the Uncollected</a>.`,
 		},
 		{
-			html: `The poems and themes from one reading are put into conversation with other readings in Voca through subject tags. To explore tags in depth, take a look at <a href="./tumultuous-tags" class="internal-link">Tumultuous Tags</a>.`,
+			html: `The poems and themes from one reading are put into conversation with other readings in Voca through subject tags. To explore tags in depth, take a look at <a href="./visualizing-voca/tumultuous-tags" class="internal-link">Tumultuous Tags</a>.`,
 		},
 		{
-			html: `Sometimes moderators or the live audience get to ask questions after a reading. But what about those watching online? See <a href="./making-metapoetry" class="internal-link">Making Metapoetry</a> for some ideas on how to actively participate in these poetic conversations.`,
+			html: `Sometimes moderators or the live audience get to ask questions after a reading. But what about those watching online? See <a href="./visualizing-voca/making-metapoetry" class="internal-link">Making Metapoetry</a> for some ideas on how to actively participate in these poetic conversations.`,
 		},
 	];
 
@@ -182,7 +182,7 @@ const cloud = cloudModule.default ?? cloudModule;
 
 		svg = d3.select(chartEl).append("svg");
 
-		d3.csv("/visualization_data/terrance_hayes.csv").then((data) => {
+		d3.csv("./visualizing-voca/visualization_data/terrance_hayes.csv").then((data) => {
 			const squareSize = 24;
 			const gap = 4;
 
