@@ -1,0 +1,83 @@
+---
+const { label } = Astro.props;
+---
+
+<details class="dropdown">
+  <summary>{label}</summary>
+
+  <nav class="menu">
+    <a href="/understanding-the-uncollected">Understanding the Uncollected</a>
+    <a href="/tumultuous-tags">Tumultuous Tags</a>
+    <a href="/making-metapoetry">Making Metapoetry</a>
+  </nav>
+</details>
+
+<style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::after {
+    content: '⌄';
+    line-height: 1;
+    transform: translateY(-2px);
+    transition: transform 0.15s;
+  }
+
+  .dropdown[open] summary::after {
+    transform: translateY(2px) rotate(180deg);
+  }
+
+
+.menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 4px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 4px 0;
+    z-index: 10;
+  }
+
+  .menu a {
+    display: block;
+    padding: 6px 12px;
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .menu a:hover {
+    background: #f5f5f5;
+  }
+</style>
+
+<script>
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('details.dropdown[open]').forEach((el) => {
+      if (!el.contains(e.target)) el.removeAttribute('open');
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('details.dropdown[open]').forEach((el) => {
+        el.removeAttribute('open');
+      });
+    }
+  });
+</script>

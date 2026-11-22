@@ -1,0 +1,46 @@
+---
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Uncollected from "../components/Uncollected.svelte";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
+        <!-- vega -->
+        <script is:inline src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+        <script
+            is:inline
+            src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"
+        ></script>
+        <script
+            is:inline
+            src="https://cdn.jsdelivr.net/npm/vega-embed@6"
+        ></script>
+    </head>
+
+    <body>
+        <Header />
+        <main>
+            <h1>Understanding the Uncollected</h1>
+            <p>Written by Alysa Meng and Maryelizabeth Koepele</p>
+
+            <p>What is uncollected/unpublished?</p>
+
+            <h2>Example 1 - Uncollected Poetry</h2>
+            <p>Placeholder for what we come up with</p>
+            <h2>Example 2 - Uncollected Poetry</h2>
+            <p>Placeholder for what we come up with</p>
+
+            <h2>More Uncollected Work</h2>
+            <Uncollected />
+        </main>
+        <Footer />
+
+        <script is:inline type="module" src="/uncollected_chart.js"></script>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+---
+import TagCanvas from '../components/TagCanvas.svelte';
+import TagBorderland from '../components/TagBorderland.svelte';
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+
+  <body>
+    <Header />
+<div class="page-heading">
+  <TagCanvas client:load />
+
+  <div class="header-overlay">
+    <div class="essay-heading">
+      <h1>Tumultuous Tags</h1>
+      <p>Written by Alysa Meng and Maryelizabeth Koepele</p>
+      <p>The background is comprised of reading tags, brightness scaled linearly based on frequency.</p>
+      <p><em>Scroll down for more!</em></p>
+    </div>
+  </div>
+</div>
+
+<main>
+    <div class="essay-content">
+      <h3>Introduction</h3>
+      <p>
+        Tags seem simple but we demonstrate that they aren't. Maybe add a narrative on a user trying
+        to find a poem using a tag and connect it to the current state of Voca?
+      </p>
+
+      <h3>A Typology of Reading Tags</h3>
+      <p>Placeholder for attempt to categorize reading tags.</p>
+
+
+      <p>Putting tags into categories is difficult.</p>
+      <TagBorderland client:visible />
+
+      <!-- bonus content on track tags -->
+      <h3>Reading vs. Track Tags</h3>
+      <div class="track-content">
+        <p>
+          Like readings, Voca contains track tags. This provides a more granular breakdown of topics
+          in a reading.
+        </p>
+
+        <p>Placeholder most common reading tags</p>
+        <p>Placeholder most common track tags</p>
+        <p>Placeholder most common co-occuring reading-track tags</p>
+
+        <p>
+          These breakdowns suggest that the track tags may serve a different purpose than the
+          reading tags. Future analysis can be done to understand the landscape of tags for tracks,
+          as well as the dialogue between reading and track tags.
+        </p>
+      </div>
+
+      <h3>Missing Tags</h3>
+      <div class="missing-tags-content">
+        <p>
+          There is another layer of complexity to these tags looking at which readings and tracks
+          are tagged in the first place.
+        </p>
+
+        <p>Placeholder for number of tags histograms.</p>
+
+        <p>
+          This makes things unsearchable. Analyzing the tags as a proxy for understand the themes in
+          the poems and readings doesn't work due to incomplete metadata.
+        </p>
+      </div>
+
+      <h3>Tag Analysis Takeaways</h3>
+      <div class="conclusion-content">
+        <p>Maryelizabeth come up with brilliant concluding thoughts.</p>
+      </div>
+    </div>
+
+    </main>
+
+    <Footer />
+
+  </body>
+</html>
+<style>
+
+.page-heading {
+  display: grid;
+  height: 100dvh;
+  width: 100%;
+  place-items: center;
+}
+
+.header-overlay {
+  grid-area: 1 / 1;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.essay-heading {
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  max-width: 50%;
+}
+
+.essay-content p {
+  text-align: left;
+}
+
+</style>

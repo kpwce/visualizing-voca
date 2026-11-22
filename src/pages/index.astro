@@ -1,0 +1,46 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import VocaStory from "../components/VocaStory.svelte";
+import TracksWordCloud from "../components/TracksWordCloud.svelte";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Visualizing Voca: From Metadata to Metapoetry</h1>
+
+			<p>
+				<a href="https://voca.arizona.edu/">Voca</a> is an audiovisual
+				archive of poetry readings at the Poetry Center Library at the
+				University of Arizona.
+			</p>
+
+			<p>Each reading is broken into tracks.</p>
+
+			<VocaStory client:load />
+
+			<p>
+				The composition of tracks varies between readings. Readings can
+				contain translations, prose, and lectures, too. Some tracks
+				resist classification by blending these categorical boundaries.
+			</p>
+
+			<TracksWordCloud client:visible />
+
+			<p>
+				Each reading takes the audience on a different journey. The
+				metadata is a gateway to understanding the richness of the
+				collection.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
