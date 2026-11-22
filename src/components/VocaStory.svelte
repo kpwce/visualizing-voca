@@ -89,6 +89,7 @@ import { onMount } from "svelte";
 import * as d3 from "d3";
 import cloudModule from "d3-cloud";
 import scrollama from "scrollama";
+import 'd3-transition';
 
 const cloud = cloudModule.default ?? cloudModule;
 

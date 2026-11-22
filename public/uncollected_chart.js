@@ -1,6 +1,6 @@
 import embed from "https://esm.sh/vega-embed@7";
 
-const response = await fetch("./visualization_data/uncollected_for_viz.json");
+const response = await fetch("./visualizing-voca/visualization_data/uncollected_for_viz.json");
 const jsonData = await response.json();
 
 const baseUrl = "https://voca.arizona.edu";
