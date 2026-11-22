@@ -123,6 +123,8 @@ Eavan Boland's 2003 reading contains a malformed template issue, where a section
 
 ![Missing mov in Eavan Boland reading](../../assets/adventures-in-web-scraping/missing-mov.png)
 
-## Code
+## Code and Ethics
 
 The code used for web scraping can be found in our Github repository.
+
+Web scraping can put substantial load on a web server and the contents may be subject to copyright. We had the permission of the Poetry Center to scrape Voca.

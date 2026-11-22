@@ -17,7 +17,39 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
             .poem {
                 text-align: left;
-    
+            }
+
+            .tag {
+                color: #8b0015; /* voca tag color */
+                font-family:
+                    "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                    sans-serif;
+                font-style: bold;
+            }
+
+            [data-emoji] {
+                position: relative;
+            }
+            [data-emoji]::after {
+                content: attr(data-emoji);
+                position: absolute;
+                left: 50%;
+                opacity: 0;
+                pointer-events: none;
+                font-family: "Noto Color Emoji", sans-serif;
+            }
+            [data-emoji].float::after {
+                animation: float 0.5s ease-out;
+            }
+            @keyframes float {
+                0% {
+                    opacity: 1;
+                    transform: translate(-50%, 0);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translate(-50%, -35px);
+                }
             }
         </style>
     </head>
@@ -31,23 +63,113 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
                 <h2>INFORMATION IMPLICATION</h2>
                 <h4>Written by Maryelizabeth Koepele</h4>
                 <p>
-                    Abandonment’s a worse aesthetic when it’s digital; creeping
-                    plants won’t grow
+                    <span
+                        class="tag"
+                        data-emoji="🏚️"
+                        onclick="floatEmoji(this)"
+                    >
+                        Abandonment
+                    </span>
+                    ’s a worse{" "}
+                    <span
+                        class="tag"
+                        data-emoji="😍"
+                        onclick="floatEmoji(this)"
+                    >
+                        aesthetic
+                    </span>{" "}
+                    in{" "}
+                    <span
+                        class="tag"
+                        data-emoji="💻"
+                        onclick="floatEmoji(this)"
+                    >
+                        digital world
+                    </span>
+                    ; creeping{" "}
+                    <span
+                        class="tag"
+                        data-emoji="🌱"
+                        onclick="floatEmoji(this)"
+                    >
+                        plants
+                    </span>{" "}
+                    won’t grow
                 </p>
                 <p>
-                    Babies through cracks in broken links & anyway what people
-                    want is photographs of rare
+                    <span
+                        class="tag"
+                        data-emoji="👶"
+                        onclick="floatEmoji(this)"
+                    >
+                        Babies
+                    </span>{" "}
+                    through cracks in broken links & anyway what{" "}
+                    <span
+                        class="tag"
+                        data-emoji="👫"
+                        onclick="floatEmoji(this)"
+                    >
+                        people
+                    </span>{" "}
+                    want is{" "}
+                    <span
+                        class="tag"
+                        data-emoji="📸"
+                        onclick="floatEmoji(this)"
+                    >
+                        photograph
+                    </span>
+                    s of rare
                 </p>
                 <p>
-                    Cacti or short-lived butterflies even bright & muddy plastic
-                    pesticide containers! Is digital data
+                    <span
+                        class="tag"
+                        data-emoji="🌵"
+                        onclick="floatEmoji(this)"
+                    >
+                        Cacti
+                    </span>{" "}
+                    or short-lived{" "}
+                    <span
+                        class="tag"
+                        data-emoji="🦋"
+                        onclick="floatEmoji(this)"
+                    >
+                        butterflies
+                    </span>{" "}
+                    even bright & muddy plastic{" "}
+                    <span
+                        class="tag"
+                        data-emoji="☣️"
+                        onclick="floatEmoji(this)"
+                    >
+                        pesticide
+                    </span>{" "}
+                    containers! Is digital data
                 </p>
                 <p>
-                    Dada? Or is the screen too braided up with symbolism? Plus
+                                        <span
+                        class="tag"
+                        data-emoji="🎭"
+                        onclick="floatEmoji(this)"
+                    >Dada</span>? Or is the screen too <span
+                        class="tag"
+                        data-emoji="🪢"
+                        onclick="floatEmoji(this)"
+                    >braided</span> up with <span
+                        class="tag"
+                        data-emoji="☮️"
+                        onclick="floatEmoji(this)"
+                    >symbolism</span>? Plus
                     the hazards, like click a rifle-laden
                 </p>
                 <p>
-                    Eagle & maybe it’s downloading an historical evil or
+                    <span
+                        class="tag"
+                        data-emoji="🦅"
+                        onclick="floatEmoji(this)"
+                    >Eagle</span> & maybe it’s downloading an historical evil or
                     gambling app. So this is where the
                 </p>
                 <p>
@@ -121,8 +243,23 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
                 <p>Zebra in the local zoo & she hasn’t been forgotten.</p>
             </div>
 
-            <p>Note: Alysa also wrote some metapoetry. It can be found in the blog <a href="/visualizing-voca/blog/alysa-metapoetry">here</a>. We chose to exclude it from this essay to focus on making poems from the metadata.</p>
+            <p>
+                Note: Alysa also wrote some metapoetry. It can be found in the
+                blog <a href="/visualizing-voca/blog/alysa-metapoetry">here</a>.
+                We chose to exclude it from this essay to focus on making poems
+                from the metadata.
+            </p>
         </main>
         <Footer />
     </body>
 </html>
+
+<script>
+    document.querySelectorAll<HTMLElement>("[data-emoji]").forEach((el) => {
+        el.addEventListener("click", () => {
+            el.classList.remove("float");
+            void el.offsetWidth;
+            el.classList.add("float");
+        });
+    });
+</script>
