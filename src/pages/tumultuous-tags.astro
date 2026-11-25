@@ -32,13 +32,42 @@ import Header from "../components/Header.astro";
     <div class="essay-content">
       <h3>Introduction</h3>
       <p>
-        Tags seem simple but we demonstrate that they aren't. Maybe add a narrative on a user trying
-        to find a poem using a tag and connect it to the current state of Voca?
+       The tags in Voca seem quite simple; find an interesting subject or location and the tag will lead you to relevant poems. As our 
+       exploration of the tags demonstrate, this data is more layered than it seems.
       </p>
 
       <h3>A Typology of Reading Tags</h3>
-      <p>Placeholder for attempt to categorize reading tags.</p>
+      <p>One of the first things we noticed about the tags is that some poetry readings have tags associated with individual poems, while others only have tags associated with the reading as a whole.
+      This disparity is a result of inconsistent grant funding for the Poetry Center’s digitization projects.
+      </p>
+      <p>The tags themselves consist of thousands of unique words and phrases which are associated with the recordings. We scraped these from the site and put them into Google Sheets to enable our data 
+      exploration. Looking at the thousands of words in our spreadsheet, we felt both overwhelmed in anticipation of trying to coax meaning from so much data and excited by the actual language in the list. 
+      Voca is an archive of poetry, and many of the tags reflect that subject matter with terms like <a href="inside/outside worlds">https://voca.arizona.edu/items-with-tag/5965/5965</a>,’ 
+      <a href="ultratranslation">https://voca.arizona.edu/items-with-tag/4835/4835</a>, <a href="non-existence">https://voca.arizona.edu/items-with-tag/6409/6409</a>’ and many others that seem to reflect a taggers’ response to the reading 
+      more than any sort of search optimization.
+      </p>
+.</p>
 
+      <h3>Why explore digital tags?
+      <p>The data from institutional digital archives such as Voca may surprise users with its evidence of human creation. Despite a clean, alphabetized digital interface, the tags contain language that resists standardization 
+      and that reflects individual experiences with the recordings. For example, the tags ‘surreal’ and ‘surrealism’ both appear. An automated tagger would likely have collapsed these into one term. The existence of both serves 
+      as evidence of the multiple taggers who made slightly different associations with similar content.
+      </p>
+      <p>This lack of standardization is an issue that is frequently present in digital collections and digital archives today. As early as 2009, in their foundational textbook, Arlene G. Taylor and Daniel N. Joudrey were discussing 
+      in which digital environments it is most appropriate to use a controlled vocabulary, noting that "people do not think of the same terms to express the same aboutness concepts." (333) Taylor and Joudrey discuss the benefits and drawbacks 
+       of using controlled vocabularies compared to social tagging practices. A controlled vocabulary is more likely to result in a concise, manageable list of subject terms, while social tagging practices are more likely to capture nuances and 
+       intra-community understandings that controlled vocabularies might miss.
+       </p>
+       <p>Voca's archive, however, is an excellent example of a digital archive which has been processed and tagged solely by library staff members and still contains broad variation in tags. Both the variations of actual words used and the 
+       type of data that seems to have been prioritized in the tags varies between readings. The poetry center has been building Voca for x years; this sort of variation reflects the changes in staff, workflows, and understandings of digital data over time.
+       </p>
+       <p>This kind of messy data is common in digital archives today, but it may soon be seen as a product of its time. As AI tools become more routinely used in library work, the future of digital tagging practices like Vocas's grow even more uncertain.
+       </p>
+       <p>Standardized digital tagging systems offer many benefits to digital archives. They create data that is more user-friendly, more search-engine friendly, and likely in smaller amounts. The purpose of this essay is not to argue for the creation 
+       and use of purposefully messy data. Instead, we are curious to discover the narratives contained in this kind of jointly created metadata.
+       </p>
+
+       <h3>Categorizing tags</h3>
 
       <p>Putting tags into categories is difficult.</p>
       <TagBorderland client:visible />
