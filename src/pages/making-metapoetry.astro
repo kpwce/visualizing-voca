@@ -17,6 +17,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
             .poem {
                 text-align: left;
+                font-size: 16px;
             }
 
             .tag {
@@ -29,6 +30,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 
             [data-emoji] {
                 position: relative;
+                font-size: 20px;
             }
             [data-emoji]::after {
                 content: attr(data-emoji);
@@ -39,7 +41,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
                 font-family: "Noto Color Emoji", sans-serif;
             }
             [data-emoji].float::after {
-                animation: float 0.5s ease-out;
+                animation: float 1s ease-out;
             }
             @keyframes float {
                 0% {
@@ -60,8 +62,15 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
             <p>Written by Alysa Meng and Maryelizabeth Koepele</p>
 
             <div class="poem">
-                <h2>INFORMATION IMPLICATION</h2>
-                <h4>Written by Maryelizabeth Koepele</h4>
+                <h2>                    <span
+                        class="tag"
+                        data-emoji="ℹ️"
+                        onclick="floatEmoji(this)"
+                    >INFORMATION</span> <span
+                        class="tag"
+                        data-emoji="➡️"
+                        onclick="floatEmoji(this)">IMPLICATION</span><sup><a href="/visualizing-voca/making-metapoetry#fn1" id="ref1">1</a></sup></h2>
+                <h5>Written by Maryelizabeth Koepele</h5>
                 <p>
                     <span
                         class="tag"
@@ -149,98 +158,357 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
                     containers! Is digital data
                 </p>
                 <p>
-                                        <span
+                    <span
                         class="tag"
                         data-emoji="🎭"
                         onclick="floatEmoji(this)"
-                    >Dada</span>? Or is the screen too <span
+                    >
+                        Dada
+                    </span>
+                    ? Or is the screen too{" "}
+                    <span
                         class="tag"
                         data-emoji="🪢"
                         onclick="floatEmoji(this)"
-                    >braided</span> up with <span
+                    >
+                        braided
+                    </span>{" "}
+                    up with{" "}
+                    <span
                         class="tag"
                         data-emoji="☮️"
                         onclick="floatEmoji(this)"
-                    >symbolism</span>? Plus
-                    the hazards, like click a rifle-laden
+                    >
+                        symbolism
+                    </span>
+                    ? Plus the hazards, like click a rifle-laden
                 </p>
                 <p>
                     <span
                         class="tag"
                         data-emoji="🦅"
                         onclick="floatEmoji(this)"
-                    >Eagle</span> & maybe it’s downloading an historical evil or
-                    gambling app. So this is where the
+                    >
+                        Eagle
+                    </span>{" "}
+                    & maybe it’s downloading an{" "}
+                    <span
+                        class="tag"
+                        data-emoji="🕰️"
+                        onclick="floatEmoji(this)"
+                    >
+                        historical
+                    </span>{" "}
+                    <span
+                        class="tag"
+                        data-emoji="😈"
+                        onclick="floatEmoji(this)"
+                    >
+                        evil
+                    </span>{" "}
+                    or gambling app. So this is where the
                 </p>
                 <p>
-                    Fables live now & art, more interconnected & perhaps less
+                    <span
+                        class="tag"
+                        data-emoji="📖"
+                        onclick="floatEmoji(this)"
+                    >Fables</span> live now & <span
+                        class="tag"
+                        data-emoji="🎨"
+                        onclick="floatEmoji(this)"
+                    >art</span>, more interconnected & perhaps less
                     fragile than before. Available for
                 </p>
                 <p>
-                    Gangs of corporate bots & aunts, grandmothers, brothers. Too
+                    <span
+                        class="tag"
+                        data-emoji="🧑‍🧑‍🧒‍🧒"
+                        onclick="floatEmoji(this)"
+                    >Gangs</span> of corporate bots & <span
+                        class="tag"
+                        data-emoji="💁‍♀️"
+                        onclick="floatEmoji(this)"
+                    >aunts</span>, <span
+                        class="tag"
+                        data-emoji="👵"
+                        onclick="floatEmoji(this)"
+                    >grandmothers</span>, <span
+                        class="tag"
+                        data-emoji="👬"
+                        onclick="floatEmoji(this)"
+                    >brothers</span>. Too
                     expansive for a
                 </p>
                 <p>
-                    Haibun but glossed with standardization. Hand lettering
-                    leaving; each word’s a god again like mint
+                    <span
+                        class="tag"
+                        data-emoji="🇯🇵"
+                        onclick="floatEmoji(this)"
+                    >Haibun</span> but <span
+                        class="tag"
+                        data-emoji="✨"
+                        onclick="floatEmoji(this)"
+                    >gloss</span>ed with standardization. <span
+                        class="tag"
+                        data-emoji="👍"
+                        onclick="floatEmoji(this)"
+                    >Hand</span> <span
+                        class="tag"
+                        data-emoji="🔤"
+                        onclick="floatEmoji(this)"
+                    >lettering</span>
+                    leaving; each word’s a <span
+                        class="tag"
+                        data-emoji="🙏"
+                        onclick="floatEmoji(this)"
+                    >god</span> again like mint
                 </p>
                 <p>
-                    Ice cream in the Tucson heat & you can eat it! What longings
+                    <span
+                        class="tag"
+                        data-emoji="🍦"
+                        onclick="floatEmoji(this)"
+                    >Ice cream</span> in the <span
+                        class="tag"
+                        data-emoji="🏜️"
+                        onclick="floatEmoji(this)"
+                    >Tucson</span> <span
+                        class="tag"
+                        data-emoji="🔥"
+                        onclick="floatEmoji(this)"
+                    >heat</span> & you can eat it! What <span
+                        class="tag"
+                        data-emoji="🖖"
+                        onclick="floatEmoji(this)"
+                    >longings</span>
                     are left in the whitespaces or
                 </p>
-                <p>Jank dead blogs by midwest teens? We won’t say</p>
+                <p><span
+                        class="tag"
+                        data-emoji="⛓️‍💥"
+                        onclick="floatEmoji(this)"
+                    >Jank</span> <span
+                        class="tag"
+                        data-emoji="🪦"
+                        onclick="floatEmoji(this)"
+                    >dead</span> blogs by <span
+                        class="tag"
+                        data-emoji="⬅️"
+                        onclick="floatEmoji(this)"
+                    >midwest</span> teens? We won’t say</p>
                 <p>
-                    Kaddish for some lost bytes. This is a poem for dynamic
-                    data, still evolving, deep listening
+                    <span
+                        class="tag"
+                        data-emoji="🕍"
+                        onclick="floatEmoji(this)"
+                    >Kaddish</span> for some lost bytes. This is a poem for dynamic
+                    data, still <span
+                        class="tag"
+                        data-emoji="📈"
+                        onclick="floatEmoji(this)"
+                    >evolving</span>, <span
+                        class="tag"
+                        data-emoji="🎧"
+                        onclick="floatEmoji(this)"
+                    >deep listening</span>
                 </p>
-                <p>Labor of attention! Here is meditation attuned to</p>
-                <p>Macaronic expression, to metaphors, to meter. To find a</p>
+                <p><span
+                        class="tag"
+                        data-emoji="💪"
+                        onclick="floatEmoji(this)"
+                    >Labor</span> of attention! Here is <span
+                        class="tag"
+                        data-emoji="🧘"
+                        onclick="floatEmoji(this)"
+                    >meditation</span> attuned to</p>
+                <p><span
+                        class="tag"
+                        data-emoji="🥟"
+                        onclick="floatEmoji(this)"
+                    >Macaronic</span> expression, to <span
+                        class="tag"
+                        data-emoji="⚖️"
+                        onclick="floatEmoji(this)"
+                    >metaphors</span>, to <span
+                        class="tag"
+                        data-emoji="📏"
+                        onclick="floatEmoji(this)"
+                    >meter</span>. To find a</p>
                 <p>
-                    Name for every category’s a parable of minor power– the font
+                    <span
+                        class="tag"
+                        data-emoji="📇"
+                        onclick="floatEmoji(this)"
+                    >Name</span> for every category’s a <span
+                        class="tag"
+                        data-emoji="📝"
+                        onclick="floatEmoji(this)"
+                    >parable</span> of minor <span
+                        class="tag"
+                        data-emoji="🔋"
+                        onclick="floatEmoji(this)"
+                    >power</span>– the font
                     suggests
                 </p>
-                <p>Objectivity but this heap of words is romance.</p>
+                <p><span
+                        class="tag"
+                        data-emoji="🧑‍🔬"
+                        onclick="floatEmoji(this)"
+                    >Objectivity</span> but this heap of <span
+                        class="tag"
+                        data-emoji="📜"
+                        onclick="floatEmoji(this)"
+                    >words</span> is <span
+                        class="tag"
+                        data-emoji="😘"
+                        onclick="floatEmoji(this)"
+                    >romance</span>.</p>
                 <p>
-                    Pain and all of it. My own computer heats & whirs when I
-                    listen too long. A
+                    <span
+                        class="tag"
+                        data-emoji="😫"
+                        onclick="floatEmoji(this)"
+                    >Pain</span> and all of it. My own computer <span
+                        class="tag"
+                        data-emoji="🔥"
+                        onclick="floatEmoji(this)"
+                    >heat</span>s & whirs when I
+                    <span
+                        class="tag"
+                        data-emoji="👂"
+                        onclick="floatEmoji(this)"
+                    >listen</span> too long. A
                 </p>
                 <p>
-                    Q and A on the Apple forum tells me I abuse my storage.
+                    <span
+                        class="tag"
+                        data-emoji="❓"
+                        onclick="floatEmoji(this)"
+                    >Q and A</span> on the <span
+                        class="tag"
+                        data-emoji="🍎"
+                        onclick="floatEmoji(this)"
+                    >Apple</span> forum tells me I abuse my storage.
                     Outside
                 </p>
                 <p>
-                    Rabbits run around the creosote. I’m headphones in 2001 yes
+                    <span
+                        class="tag"
+                        data-emoji="🐰"
+                        onclick="floatEmoji(this)"
+                    >Rabbits</span> run around the creosote. I’m headphones in <span
+                        class="tag"
+                        data-emoji="📅"
+                        onclick="floatEmoji(this)"
+                    >2001</span> yes
                     there’s
                 </p>
                 <p>
-                    Sadness & two sets of poems depending on september’s
+                    <span
+                        class="tag"
+                        data-emoji="😭"
+                        onclick="floatEmoji(this)"
+                    >Sadness</span> & two sets of poems depending on <span
+                        class="tag"
+                        data-emoji="🍂"
+                        onclick="floatEmoji(this)"
+                    >september</span>’s
                     capitalization. Were there
                 </p>
                 <p>
-                    Tabloids stealing grief? I was young & still don’t know
+                    <span
+                        class="tag"
+                        data-emoji="📰"
+                        onclick="floatEmoji(this)"
+                    >Tabloids</span> stealing <span
+                        class="tag"
+                        data-emoji="😔"
+                        onclick="floatEmoji(this)"
+                    >grief</span>? I was young & still don’t know
                     proper
                 </p>
                 <p>
-                    Ultratranslation to layer past & present. The poets don’t
+                    <span
+                        class="tag"
+                        data-emoji="🚚"
+                        onclick="floatEmoji(this)"
+                    >Ultratranslation</span> to layer <span
+                        class="tag"
+                        data-emoji="⏮️"
+                        onclick="floatEmoji(this)"
+                    >past</span> & <span
+                        class="tag"
+                        data-emoji="🎁"
+                        onclick="floatEmoji(this)"
+                    >present</span>. The <span
+                        class="tag"
+                        data-emoji="✍️"
+                        onclick="floatEmoji(this)"
+                    >poet</span>s don’t
                     say who sold
                 </p>
                 <p>
-                    Vacations for survivors. I’ll leave the rabbits and the
+                    <span
+                        class="tag"
+                        data-emoji="🏖️"
+                        onclick="floatEmoji(this)"
+                    >Vacations</span> for <span
+                        class="tag"
+                        data-emoji="🏝️"
+                        onclick="floatEmoji(this)"
+                    >survivor</span>s. I’ll leave the <span
+                        class="tag"
+                        data-emoji="🐰"
+                        onclick="floatEmoji(this)"
+                    >rabbits</span> and the
                     creosote. The audio
                 </p>
                 <p>
-                    Waffles. My technology’s decaying but I’m still building
+                    <span
+                        class="tag"
+                        data-emoji="🧇"
+                        onclick="floatEmoji(this)"
+                    >Waffles</span>. My <span
+                        class="tag"
+                        data-emoji="📱"
+                        onclick="floatEmoji(this)"
+                    >technology</span>’s <span
+                        class="tag"
+                        data-emoji="📉"
+                        onclick="floatEmoji(this)"
+                    >decaying</span> but I’m still building
                     data. More
                 </p>
                 <p>
-                    eXactly: something’s building mine & someone’s harvesting &
+                    <span
+                        class="tag"
+                        data-emoji="🎯"
+                        onclick="floatEmoji(this)"
+                    >eXactly</span>: something’s building mine & someone’s harvesting &
                     maybe hoping
                 </p>
                 <p>
-                    Young readers won’t learn scaffolding if the structure’s
-                    smooth enough. Like the baby
+                    <span
+                        class="tag"
+                        data-emoji="👧"
+                        onclick="floatEmoji(this)"
+                    >Young</span> readers won’t learn scaffolding if the structure’s
+                    smooth enough. Like the <span
+                        class="tag"
+                        data-emoji="👶"
+                        onclick="floatEmoji(this)"
+                    >baby</span>
                 </p>
-                <p>Zebra in the local zoo; they blamed her death on fencing.</p>
+                <p><span
+                        class="tag"
+                        data-emoji="🦓"
+                        onclick="floatEmoji(this)"
+                    >Zebra</span> in the local zoo; they blamed her <span
+                        class="tag"
+                        data-emoji="💀"
+                        onclick="floatEmoji(this)"
+                    >death</span> on fencing.</p>
             </div>
 
             <p>
@@ -249,7 +517,21 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
                 We chose to exclude it from this essay to focus on making poems
                 from the metadata.
             </p>
+
+
+        <h2>Notes</h2>
+            <footer>
+  <hr>
+  <ol>
+    <li id="fn1">
+      The colored words correspond to reading and track tags in Voca.
+      <a href="/visualizing-voca/making-metapoetry#ref1" aria-label="Back">↩</a>
+    </li>
+  </ol>
+</footer>
         </main>
+
+        
         <Footer />
     </body>
 </html>
